@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph.xml"
+    app:startDestination="@id/splashFragment"
+    >
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="me.abdelraoufsabri.learn.gadsleaderboard.splash.SplashFragment"
+        android:label="Splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_leaderBoardFragment"
+            app:destination="@id/leaderBoardFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/leaderBoardFragment"
+        android:name="me.abdelraoufsabri.learn.gadsleaderboard.leaderboard.LeaderBoardFragment"
+        android:label="fragment_leader_board"
+        tools:layout="@layout/fragment_leader_board" >
+        <action
+            android:id="@+id/action_leaderBoardFragment_to_projectSubmissionFragment"
+            app:destination="@id/projectSubmissionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/projectSubmissionFragment"
+        android:name="me.abdelraoufsabri.learn.gadsleaderboard.submission.ProjectSubmissionFragment"
+        android:label="fragment_project_submission"
+        tools:layout="@layout/fragment_project_submission" />
+</navigation>

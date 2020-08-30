@@ -1,0 +1,28 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowDisablePreview">true</item>
+    </style>
+
+    <style name="TabTextStyle">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="font">@font/raleway_semibold</item>
+    </style>
+
+    <style name="SubmissionStyle">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/accent_color_dark</item>
+        <item name="fontFamily">@font/raleway_medium</item>
+
+    </style>
+
+    <style name="SubmissionFieldStyle">
+        <item name="android:background">@drawable/field_background</item>
+        <item name="android:padding">8dp</item>
+    </style>
+
+</resources>

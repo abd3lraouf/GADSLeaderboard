@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">#141414</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="secondary_color">#141414</color>
+    <color name="lightOnSurface">#FFF</color>
+    <color name="lightOnSurfaceClicked">#B2FFFFFF</color>
+    <color name="textOnLightSurface">#000</color>
+    <color name="list_item_color_main">#171717</color>
+    <color name="list_item_color_secondary">#818181</color>
+    <color name="accent_color_dark">#CA7104</color>
+    <color name="accent_color_light">#D5B690</color>
+</resources>

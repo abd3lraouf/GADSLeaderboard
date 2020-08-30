@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <inset android:insetLeft="16dp" android:insetRight="16dp">
+            <shape android:shape="oval">
+                <size android:width="100dp" android:height="100dp" />
+                <corners android:radius="100dp" />
+
+                <gradient android:angle="0" android:endColor="@color/accent_color_dark" android:gradientRadius="100dp" android:startColor="@color/accent_color_light" android:type="radial" />
+            </shape>
+        </inset>
+    </item>
+</selector>

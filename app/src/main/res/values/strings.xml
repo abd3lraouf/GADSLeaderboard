@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">GADS Leaderboard</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="leaderboard">Leaderboard</string>
+    <string name="submit">Submit</string>
+    <string name="learning_leaders">Learning Leaders</string>
+    <string name="skill_iq_leaders">Skill IQ Leaders</string>
+    <string name="project_submission">Project Submission</string>
+    <string name="email_address">Email Address</string>
+    <string name="project_link_on_github">Project link on GitHub</string>
+    <string name="last_name">Last Name</string>
+    <string name="first_name">First Name</string>
+    <string name="are_you_sure">Are you sure?</string>
+    <string name="yes">Yes</string>
+    <string name="submission_was_successful">Submission was Successful</string>
+    <string name="submission_was_not_successful">Submission was not Successful</string>
+    <string name="loading">Loading...</string>
+</resources>
