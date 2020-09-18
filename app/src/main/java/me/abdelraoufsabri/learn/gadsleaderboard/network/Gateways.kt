@@ -6,16 +6,16 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 object GateWays{
-    object LearnersGateWay {
-        val getOkHttpClient: OkHttpClient
-            get() {
-                val logging = HttpLoggingInterceptor()
-                logging.setLevel(HttpLoggingInterceptor.Level.NONE)
-                return OkHttpClient.Builder()
-                    .addInterceptor(logging)
-                    .build()
-            }
+    val getOkHttpClient: OkHttpClient
+        get() {
+            val logging = HttpLoggingInterceptor()
+            logging.setLevel(HttpLoggingInterceptor.Level.NONE)
+            return OkHttpClient.Builder()
+                .addInterceptor(logging)
+                .build()
+        }
 
+    object LearnersGateWay {
         val webService = Retrofit.Builder()
             .baseUrl("https://gadsapi.herokuapp.com/api/")
             .client(getOkHttpClient)
@@ -24,20 +24,10 @@ object GateWays{
     }
 
     object GoogleForm{
-        val getOkHttpClient: OkHttpClient
-            get() {
-                val logging = HttpLoggingInterceptor()
-                logging.setLevel(HttpLoggingInterceptor.Level.NONE)
-                return OkHttpClient.Builder()
-                    .addInterceptor(logging)
-                    .build()
-            }
-
         val webService = Retrofit.Builder()
             .baseUrl("https://docs.google.com/forms/d/e/")
             .client(getOkHttpClient)
             .addConverterFactory(GsonConverterFactory.create())
             .build().create(GoogleFormsWebService::class.java)
-
     }
 }

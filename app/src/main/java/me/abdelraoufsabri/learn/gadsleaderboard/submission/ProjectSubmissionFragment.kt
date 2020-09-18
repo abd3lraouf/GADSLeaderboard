@@ -31,11 +31,13 @@ class ProjectSubmissionFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         navController = findNavController()
-        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner, object : OnBackPressedCallback(true /* enabled by default */) {
+        val onBackPressedCallback = object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
                 navController.popBackStack()
             }
-        })
+        }
+
+        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner, onBackPressedCallback)
 
         return inflater.inflate(R.layout.fragment_project_submission, container, false)
     }
@@ -58,7 +60,7 @@ class ProjectSubmissionFragment : Fragment() {
         }
     }
 
-    fun beginUpload(view: View) {
+    private fun beginUpload(view: View) {
         val loadingView = LayoutInflater.from(context).inflate(R.layout.loading, null)
         val loadingDialog = showCustomDialog(loadingView, 200.dp, 100.dp, false)
 
@@ -90,7 +92,6 @@ class ProjectSubmissionFragment : Fragment() {
                 tvResultText.text = resources.getString(R.string.submission_was_not_successful)
             }
         }
-
     }
 
     private fun showCustomDialog(view: View, requestedWidth: Int, requestedHeight: Int, cancelable:Boolean): AlertDialog {
@@ -114,6 +115,4 @@ class ProjectSubmissionFragment : Fragment() {
 
         return dialog
     }
-
-
 }

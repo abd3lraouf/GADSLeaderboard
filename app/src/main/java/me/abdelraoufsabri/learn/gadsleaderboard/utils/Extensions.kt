@@ -59,6 +59,5 @@ object Extensions {
             statusBarColor = Color.TRANSPARENT
             navigationBarColor = ContextCompat.getColor(this@setupAppBackground, R.color.secondary_color)
         }
-
     }
 }

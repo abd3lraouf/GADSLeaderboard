@@ -19,6 +19,8 @@ class HoursAdapter(
             notifyDataSetChanged()
         }
 
+    val listeners:ArrayList<(HoursTopLearner) -> Unit > = arrayListOf()
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.list_item_top_learning_hours_leader, parent, false)
@@ -27,6 +29,10 @@ class HoursAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(learners[position])
+        listeners.forEach { it(learners[position]) }
+        listeners.add {
+            
+        }
     }
 
     override fun getItemCount() = learners.count()
